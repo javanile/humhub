@@ -10,13 +10,13 @@ class m160229_162959_multiusergroups extends Migration
     {
         $this->createTable('group_user', [
             'id' => 'pk',
-            'user_id' => 'int(11) NOT NULL',
-            'group_id' => 'int(11) NOT NULL',
-            'is_group_admin' => 'tinyint(1) NOT NULL DEFAULT 0',
+            'user_id' => 'integer NOT NULL',
+            'group_id' => 'integer NOT NULL',
+            'is_group_admin' => 'smallint NOT NULL DEFAULT 0',
             'created_at' => 'datetime DEFAULT NULL',
-            'created_by' => 'int(11) DEFAULT NULL',
+            'created_by' => 'integer DEFAULT NULL',
             'updated_at' => 'datetime DEFAULT NULL',
-            'updated_by' => 'int(11) DEFAULT NULL',
+            'updated_by' => 'integer DEFAULT NULL',
         ], '');
 
         // Add indexes and foreign keys

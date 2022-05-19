@@ -14,7 +14,7 @@ class m150629_220311_change extends Migration
         $this->renameColumn('notification', 'target_object_id', 'obsolete_target_object_id');
         $this->renameColumn('notification', 'target_object_model', 'obsolete_target_object_model');
 
-        $this->addColumn('notification', 'originator_user_id', 'int(11) DEFAULT NULL');
+        $this->addColumn('notification', 'originator_user_id', 'integer DEFAULT NULL');
     }
 
     public function down()

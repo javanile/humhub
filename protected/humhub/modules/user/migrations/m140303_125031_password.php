@@ -13,7 +13,7 @@ class m140303_125031_password extends Migration
         // Create New User Password Table
         $this->createTable('user_password', [
             'id' => 'pk',
-            'user_id' => 'int(10) DEFAULT NULL',
+            'user_id' => 'integer DEFAULT NULL',
             'algorithm' => 'varchar(20) DEFAULT NULL',
             'password' => 'text DEFAULT NULL',
             'salt' => 'text DEFAULT NULL',

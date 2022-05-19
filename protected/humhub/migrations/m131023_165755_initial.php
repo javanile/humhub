@@ -16,9 +16,9 @@ class m131023_165755_initial extends Migration
             'value_text' => 'text DEFAULT NULL',
             'module_id' => 'varchar(100) DEFAULT NULL',
             'created_at' => 'datetime NOT NULL',
-            'created_by' => 'int(11) NOT NULL',
+            'created_by' => 'integer NOT NULL',
             'updated_at' => 'datetime NOT NULL',
-            'updated_by' => 'int(11) NOT NULL',
+            'updated_by' => 'integer NOT NULL',
                 ], '');
 
 

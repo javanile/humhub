@@ -13,8 +13,8 @@ class m140830_145504_following extends Migration
         $this->createTable('follow', [
             'id' => 'pk',
             'object_model' => 'varchar(100) NOT NULL',
-            'object_id' => 'int(11) NOT NULL',
-            'user_id' => 'int(11) NOT NULL',
+            'object_id' => 'integer NOT NULL',
+            'user_id' => 'integer NOT NULL',
                 ], '');
 
         $this->createIndex('index_user', 'follow', 'user_id', false);

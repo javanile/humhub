@@ -11,8 +11,8 @@ class m141019_093319_mentioning extends Migration
         $this->createTable('user_mentioning', [
             'id' => 'pk',
             'object_model' => 'varchar(100) NOT NULL',
-            'object_id' => 'int(11) NOT NULL',
-            'user_id' => 'int(11) NOT NULL',
+            'object_id' => 'integer NOT NULL',
+            'user_id' => 'integer NOT NULL',
                 ], '');
 
         $this->createIndex('i_user', 'user_mentioning', 'user_id', false);

@@ -8,7 +8,7 @@ class m140901_153403_addState extends Migration
 
     public function up()
     {
-        $this->addColumn('user_module', 'state', 'int(4)');
+        $this->addColumn('user_module', 'state', 'integer');
         $this->dropColumn('user_module', 'created_at');
         $this->dropColumn('user_module', 'created_by');
         $this->dropColumn('user_module', 'updated_at');

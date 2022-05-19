@@ -15,8 +15,8 @@ class m201025_095247_spaces_of_users_group extends Migration
     {
         $this->createTable('group_space', [
             'id' => 'pk',
-            'space_id' => 'int(11) NOT NULL',
-            'group_id' => 'int(11) NOT NULL',
+            'space_id' => 'integer NOT NULL',
+            'group_id' => 'integer NOT NULL',
         ], '');
 
         // Add indexes and foreign keys

@@ -12,12 +12,12 @@ class m131023_170253_initial extends Migration
             'id' => 'pk',
             'message' => 'text DEFAULT NULL',
             'object_model' => 'varchar(100) NOT NULL',
-            'object_id' => 'int(11) NOT NULL',
-            'space_id' => 'int(11) DEFAULT NULL',
+            'object_id' => 'integer NOT NULL',
+            'space_id' => 'integer DEFAULT NULL',
             'created_at' => 'datetime DEFAULT NULL',
-            'created_by' => 'int(11) DEFAULT NULL',
+            'created_by' => 'integer DEFAULT NULL',
             'updated_at' => 'datetime DEFAULT NULL',
-            'updated_by' => 'int(11) DEFAULT NULL',
+            'updated_by' => 'integer DEFAULT NULL',
         ]);
     }
 

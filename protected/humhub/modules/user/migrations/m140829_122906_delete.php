@@ -13,7 +13,7 @@ class m140829_122906_delete extends Migration
         $this->dropColumn('user', 'user_invite_id');
 
         # Remove status default value
-        $this->alterColumn('user', 'status', 'tinyint(4)');
+        $this->alterColumn('user', 'status', 'smallint');
     }
 
     public function down()

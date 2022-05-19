@@ -8,7 +8,7 @@ class m140930_205859_fix_default extends Migration
 
     public function up()
     {
-        $this->alterColumn('like', 'target_user_id', 'int(11) DEFAULT NULL');
+        $this->alterColumn('like', 'target_user_id', 'integer DEFAULT NULL');
     }
 
     public function down()

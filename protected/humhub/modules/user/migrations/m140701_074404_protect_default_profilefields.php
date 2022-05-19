@@ -9,7 +9,7 @@ class m140701_074404_protect_default_profilefields extends Migration
     public function up()
     {
 
-        $this->addColumn('profile_field_category', 'is_system', 'int(1) DEFAULT NULL');
+        $this->addColumn('profile_field_category', 'is_system', 'integer DEFAULT NULL');
 
         $this->update('profile_field', [
             'is_system' => 1

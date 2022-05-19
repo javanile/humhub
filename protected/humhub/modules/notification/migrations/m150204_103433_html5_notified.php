@@ -16,7 +16,7 @@ class m150204_103433_html5_notified extends Migration
             ]);
         }
 
-        $this->addColumn('notification', 'desktop_notified', 'tinyint(1) DEFAULT 0');
+        $this->addColumn('notification', 'desktop_notified', 'smallint DEFAULT 0');
         $this->update('notification', ['desktop_notified' => 1]);
     }
 

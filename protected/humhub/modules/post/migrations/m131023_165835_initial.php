@@ -15,9 +15,9 @@ class m131023_165835_initial extends Migration
             'original_message' => 'text DEFAULT NULL',
             'url' => 'varchar(255) DEFAULT NULL',
             'created_at' => 'datetime DEFAULT NULL',
-            'created_by' => 'int(11) DEFAULT NULL',
+            'created_by' => 'integer DEFAULT NULL',
             'updated_at' => 'datetime DEFAULT NULL',
-            'updated_by' => 'int(11) DEFAULT NULL',
+            'updated_by' => 'integer DEFAULT NULL',
                 ], '');
     }
 

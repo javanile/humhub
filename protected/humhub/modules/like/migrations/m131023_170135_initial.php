@@ -8,13 +8,13 @@ class m131023_170135_initial extends Migration {
     public function up() {
         $this->createTable('like', [
             'id' => 'pk',
-            'target_user_id' => 'int(11) NOT NULL',
+            'target_user_id' => 'integer NOT NULL',
             'object_model' => 'varchar(100) NOT NULL',
-            'object_id' => 'int(11) NOT NULL',
+            'object_id' => 'integer NOT NULL',
             'created_at' => 'datetime DEFAULT NULL',
-            'created_by' => 'int(11) DEFAULT NULL',
+            'created_by' => 'integer DEFAULT NULL',
             'updated_at' => 'datetime DEFAULT NULL',
-            'updated_by' => 'int(11) DEFAULT NULL',
+            'updated_by' => 'integer DEFAULT NULL',
                 ], '');
     }
 

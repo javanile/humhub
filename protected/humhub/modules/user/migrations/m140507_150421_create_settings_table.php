@@ -12,14 +12,14 @@ class m140507_150421_create_settings_table extends Migration
         // Create New User Settings Table
         $this->createTable('user_setting', [
             'id' => 'pk',
-            'user_id' => 'int(10)',
+            'user_id' => 'integer',
             'module_id' => 'varchar(100) DEFAULT NULL',
             'name' => 'varchar(100)',
             'value' => 'varchar(255) DEFAULT NULL',
             'created_at' => 'datetime DEFAULT NULL',
-            'created_by' => 'int(11) DEFAULT NULL',
+            'created_by' => 'integer DEFAULT NULL',
             'updated_at' => 'datetime DEFAULT NULL',
-            'updated_by' => 'int(11) DEFAULT NULL',
+            'updated_by' => 'integer DEFAULT NULL',
                 ], '');
 
         $this->createIndex('idx_user_setting', 'user_setting', 'user_id, module_id, name', true);

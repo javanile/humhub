@@ -8,8 +8,8 @@ class m140901_170329_group_create_space extends Migration
 
     public function up()
     {
-        $this->addColumn('group', 'can_create_public_spaces', 'INT(1) DEFAULT 1');
-        $this->addColumn('group', 'can_create_private_spaces', 'INT(1) DEFAULT 1');
+        $this->addColumn('group', 'can_create_public_spaces', 'integer DEFAULT 1');
+        $this->addColumn('group', 'can_create_private_spaces', 'integer DEFAULT 1');
     }
 
     public function down()

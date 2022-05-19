@@ -13,21 +13,21 @@ class m131023_165625_initial extends Migration
             'id' => 'pk',
             'type' => 'varchar(45) DEFAULT NULL',
             'object_model' => 'varchar(50) NOT NULL',
-            'object_id' => 'int(11) NOT NULL',
+            'object_id' => 'integer NOT NULL',
             'created_at' => 'datetime DEFAULT NULL',
-            'created_by' => 'int(11) DEFAULT NULL',
+            'created_by' => 'integer DEFAULT NULL',
             'updated_at' => 'datetime DEFAULT NULL',
-            'updated_by' => 'int(11) DEFAULT NULL',
+            'updated_by' => 'integer DEFAULT NULL',
                 ], '');
 
         $this->createTable('wall_entry', [
             'id' => 'pk',
-            'wall_id' => 'int(11) NOT NULL',
-            'content_id' => 'int(11) NOT NULL',
+            'wall_id' => 'integer NOT NULL',
+            'content_id' => 'integer NOT NULL',
             'created_at' => 'datetime DEFAULT NULL',
-            'created_by' => 'int(11) DEFAULT NULL',
+            'created_by' => 'integer DEFAULT NULL',
             'updated_at' => 'datetime DEFAULT NULL',
-            'updated_by' => 'int(11) DEFAULT NULL',
+            'updated_by' => 'integer DEFAULT NULL',
                 ], '');
 
 
@@ -35,16 +35,16 @@ class m131023_165625_initial extends Migration
             'id' => 'pk',
             'guid' => 'varchar(45) NOT NULL',
             'object_model' => 'varchar(100) NOT NULL',
-            'object_id' => 'int(11) NOT NULL',
-            'visibility' => 'tinyint(4) DEFAULT NULL',
-            'sticked' => 'tinyint(4) DEFAULT NULL',
-            'archived' => 'tinytext DEFAULT NULL',
-            'space_id' => 'int(11) DEFAULT NULL',
-            'user_id' => 'int(11) DEFAULT NULL',
+            'object_id' => 'integer NOT NULL',
+            'visibility' => 'smallint DEFAULT NULL',
+            'sticked' => 'smallint DEFAULT NULL',
+            'archived' => 'text DEFAULT NULL',
+            'space_id' => 'integer DEFAULT NULL',
+            'user_id' => 'integer DEFAULT NULL',
             'created_at' => 'datetime DEFAULT NULL',
-            'created_by' => 'int(11) DEFAULT NULL',
+            'created_by' => 'integer DEFAULT NULL',
             'updated_at' => 'datetime DEFAULT NULL',
-            'updated_by' => 'int(11) DEFAULT NULL',
+            'updated_by' => 'integer DEFAULT NULL',
                 ], '');
     }
 
