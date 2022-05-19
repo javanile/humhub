@@ -22,8 +22,8 @@ class m151223_171310_fix_notifications extends Migration
             ['class' => 'humhub\modules\space\notifications\ApprovalRequestDeclined']
         ]);
 
-        $query->leftJoin('user', 'notification.originator_user_id=user.id');
-        $query->andWhere('user.id IS NULL');
+        $query->leftJoin('user', 'notification.originator_user_id="user"."id"');
+        $query->andWhere('"user"."id" IS NULL');
 
         foreach ($query->all() as $notification) {
             $this->delete('notification', ['id' => $notification['id']]);
