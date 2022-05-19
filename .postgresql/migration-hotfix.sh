@@ -14,7 +14,7 @@ cp ./.postgresql/patches/m150910_223305_fix_user_follow.php ./protected/humhub/m
 cp ./.postgresql/patches/m151013_223814_include_dashboard.php ./protected/humhub/modules/space/migrations/m151013_223814_include_dashboard.php
 cp ./.postgresql/patches/m151223_171310_fix_notifications.php ./protected/humhub/modules/space/migrations/m151223_171310_fix_notifications.php
 cp ./.postgresql/patches/m160205_203840_foreign_keys.php ./protected/humhub/modules/user/migrations/m160205_203840_foreign_keys.php
-#cp ./.postgresql/patches/m160205_203913_foreign_keys.php ./protected/humhub/modules/space/migrations/m160205_203913_foreign_keys.php
+cp ./.postgresql/patches/m160205_203913_foreign_keys.php ./protected/humhub/modules/space/migrations/m160205_203913_foreign_keys.php
 #cp ./.postgresql/patches/m160220_013525_contentcontainer_id.php ./protected/humhub/modules/content/migrations/m160220_013525_contentcontainer_id.php
 #cp ./.postgresql/patches/m160229_162959_multiusergroups.php ./protected/humhub/modules/user/migrations/m160229_162959_multiusergroups.php
 #cp ./.postgresql/patches/m160501_220850_activity_pk_int.php ./protected/humhub/modules/activity/migrations/m160501_220850_activity_pk_int.php
