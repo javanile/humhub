@@ -7,7 +7,7 @@ class m160501_220850_activity_pk_int extends Migration
 
     public function up()
     {
-        $this->alterColumn('activity', 'object_id', 'integer NOT NULL');
+        $this->alterColumn('activity', 'object_id', 'integer NOT NULL USING object_id::integer');
     }
 
     public function down()
