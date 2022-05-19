@@ -10,3 +10,5 @@ find ./protected/humhub/ -type f -path '*/migrations/*' -name '*.php' -exec sed 
 find ./protected/humhub/ -type f -path '*/migrations/*' -name '*.php' -exec sed -i "s/tinytext/text/g" {} +
 find ./protected/humhub/ -type f -path '*/migrations/*' -name '*.php' -exec sed -i "s/DATETIME/timestamp/g" {} +
 find ./protected/humhub/ -type f -path '*/migrations/*' -name '*.php' -exec sed -i "s/longblob/bytea/g" {} +
+
+sed -i 's/`url`/url/g' ./protected/humhub/migrations/m131203_110444_oembed.php
