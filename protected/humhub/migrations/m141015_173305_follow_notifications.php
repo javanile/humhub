@@ -10,7 +10,7 @@ class m141015_173305_follow_notifications extends Migration
     {
         $this->renameTable('follow', 'user_follow');
 
-        $this->addColumn('user_follow', 'send_notifications', 'boolean default "1"');
+        $this->addColumn('user_follow', 'send_notifications', 'boolean default \'1\'');
 
 
         // Fix: Migrate user_follow table to follow table
