@@ -9,7 +9,8 @@ class m160205_203840_foreign_keys extends Migration
     public function up()
     {
         // Cleanup orphaned records
-       // $this->db->createCommand('DELETE FROM user_module LEFT JOIN user u ON u.id=user_module.user_id WHERE u.id IS NULL AND user_module.user_id != 0')->execute();
+        // @TODO: Restore the following on PostgreSQL equivalent
+        #$this->db->createCommand('DELETE FROM user_module LEFT JOIN user u ON u.id=user_module.user_id WHERE u.id IS NULL AND user_module.user_id != 0')->execute();
 
         try {
             $this->addForeignKey('fk_user_follow-user_id', 'user_follow', 'user_id', 'user', 'id', 'CASCADE', 'CASCADE');
