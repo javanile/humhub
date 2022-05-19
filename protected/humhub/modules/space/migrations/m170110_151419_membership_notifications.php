@@ -6,7 +6,7 @@ class m170110_151419_membership_notifications extends Migration
 {
     public function up()
     {
-        $this->addColumn('space_membership', 'send_notifications', 'boolean default "0"');
+        $this->addColumn('space_membership', 'send_notifications', 'boolean default false');
     }
 
     public function down()
