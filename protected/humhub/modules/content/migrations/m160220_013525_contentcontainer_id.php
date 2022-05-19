@@ -36,8 +36,8 @@ class m160220_013525_contentcontainer_id extends Migration
         $this->update('content', ['updated_by' => new Expression('created_by')], ['IS', 'updated_by', new Expression('NULL')]);
 
         // Make sure fk dont fail
-        Yii::$app->db->createCommand('UPDATE content LEFT JOIN user ON content.updated_by = user.id SET content.updated_by = NULL WHERE user.id IS NULL')->execute();
-        Yii::$app->db->createCommand('UPDATE content LEFT JOIN user ON content.created_by = user.id SET content.created_by = NULL WHERE user.id IS NULL')->execute();
+      //  Yii::$app->db->createCommand('UPDATE content LEFT JOIN user ON content.updated_by = user.id SET content.updated_by = NULL WHERE user.id IS NULL')->execute();
+//        Yii::$app->db->createCommand('UPDATE content LEFT JOIN user ON content.created_by = user.id SET content.created_by = NULL WHERE user.id IS NULL')->execute();
 
         // Add FKs
         $this->addForeignKey('fk-contentcontainer', 'content', 'contentcontainer_id', 'contentcontainer', 'id', 'SET NULL');
