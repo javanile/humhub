@@ -118,7 +118,7 @@ class m131023_164513_initial extends Migration
         $this->addPrimaryKey('pk_user_follow', 'user_follow', 'user_follower_id,user_followed_id');
 
 
-        try {
+
             // May already created
             $this->createTable('user_http_session', [
                 'id' => 'char(32) NOT NULL',
@@ -127,9 +127,6 @@ class m131023_164513_initial extends Migration
                 'data' => 'bytea DEFAULT NULL',
                     ], '');
             $this->addPrimaryKey('pk_user_http_session', 'user_http_session', 'id');
-        } catch (Exception $ex) {
-            
-        }
 
 
 
