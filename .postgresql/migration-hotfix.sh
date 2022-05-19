@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cp ./.postgresql/patches/m131023_165755_initial.php ./protected/humhub/migrations/m131023_165755_initial.php
-#cp ./.postgresql/patches/m131213_165552_user_optimize.php ./protected/humhub/modules/user/migrations/m131213_165552_user_optimize.php
+cp ./.postgresql/patches/m131213_165552_user_optimize.php ./protected/humhub/modules/user/migrations/m131213_165552_user_optimize.php
 #cp ./.postgresql/patches/m140512_141414_i18n_profilefields.php ./protected/humhub/modules/user/migrations/m140512_141414_i18n_profilefields.php
 #cp ./.postgresql/patches/m140701_074404_protect_default_profilefields.php ./protected/humhub/modules/user/migrations/m140701_074404_protect_default_profilefields.php
 #cp ./.postgresql/patches/m140901_080147_indizies.php ./protected/humhub/modules/like/migrations/m140901_080147_indizies.php
@@ -20,3 +20,7 @@ cp ./.postgresql/patches/m131023_165755_initial.php ./protected/humhub/migration
 #cp ./.postgresql/patches/m160501_220850_activity_pk_int.php ./protected/humhub/modules/activity/migrations/m160501_220850_activity_pk_int.php
 #cp ./.postgresql/patches/m170110_151419_membership_notifications.php ./protected/humhub/modules/space/migrations/m170110_151419_membership_notifications.php
 #cp ./.postgresql/patches/m170111_190400_disable_web_notifications.php ./protected/humhub/modules/notification/migrations/m170111_190400_disable_web_notifications.php
+
+git add .
+git commit -am "migration hotfix"
+git push
