@@ -124,7 +124,7 @@ class m131023_164513_initial extends Migration
                 'id' => 'char(32) NOT NULL',
                 'expire' => 'integer DEFAULT NULL',
                 'user_id' => 'integer DEFAULT NULL',
-                'data' => 'longblob DEFAULT NULL',
+                'data' => 'bytea DEFAULT NULL',
                     ], '');
             $this->addPrimaryKey('pk_user_http_session', 'user_http_session', 'id');
 
