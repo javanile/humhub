@@ -10,7 +10,7 @@ class m150910_223305_fix_user_follow extends Migration
     {
         $activities = (new \yii\db\Query())->select("activity.*, content.user_id, user_follow.id as follow_id")->from('activity')
                 ->leftJoin('content', 'content.object_model=:activityModel AND content.object_id=activity.id', [':activityModel' => Activity::class])
-                ->leftJoin('user_follow', 'activity.object_model=user_follow.object_model AND activity.object_id=user_follow.object_id AND user_follow.user_id=content.user_id')
+                ->leftJoin('user_follow', 'activity.object_model=user_follow.object_model AND activity.object_id=user_follow.object_id::varchar AND user_follow.user_id=content.user_id')
                 ->where(['class' => 'humhub\modules\user\activities\UserFollow', 'activity.object_model' => 'humhub\modules\user\models\User']);
         foreach ($activities->each() as $activity) {
             if ($activity['follow_id'] != "") {
