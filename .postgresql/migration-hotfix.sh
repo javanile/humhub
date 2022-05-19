@@ -7,7 +7,7 @@ cp ./.postgresql/patches/m140701_074404_protect_default_profilefields.php ./prot
 cp ./.postgresql/patches/m140901_080147_indizies.php ./protected/humhub/modules/like/migrations/m140901_080147_indizies.php
 cp ./.postgresql/patches/m140901_080432_indices.php ./protected/humhub/modules/file/migrations/m140901_080432_indices.php
 cp ./.postgresql/patches/m171025_200312_utf8mb4_fixes.php ./protected/humhub/modules/user/migrations/m171025_200312_utf8mb4_fixes.php
-#cp ./.postgresql/patches/m131023_164513_initial.php ./protected/humhub/modules/user/migrations/m131023_164513_initial.php
+cp ./.postgresql/patches/m131023_164513_initial.php ./protected/humhub/modules/user/migrations/m131023_164513_initial.php
 #cp ./.postgresql/patches/m141015_173305_follow_notifications.php ./protected/humhub/migrations/m141015_173305_follow_notifications.php
 #cp ./.postgresql/patches/m150429_223856_optimize.php ./protected/humhub/modules/notification/migrations/m150429_223856_optimize.php
 #cp ./.postgresql/patches/m150910_223305_fix_user_follow.php ./protected/humhub/modules/user/migrations/m150910_223305_fix_user_follow.php
