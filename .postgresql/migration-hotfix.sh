@@ -19,7 +19,7 @@ cp ./.postgresql/patches/m160220_013525_contentcontainer_id.php ./protected/humh
 cp ./.postgresql/patches/m160229_162959_multiusergroups.php ./protected/humhub/modules/user/migrations/m160229_162959_multiusergroups.php
 cp ./.postgresql/patches/m160501_220850_activity_pk_int.php ./protected/humhub/modules/activity/migrations/m160501_220850_activity_pk_int.php
 cp ./.postgresql/patches/m170110_151419_membership_notifications.php ./protected/humhub/modules/space/migrations/m170110_151419_membership_notifications.php
-#cp ./.postgresql/patches/m170111_190400_disable_web_notifications.php ./protected/humhub/modules/notification/migrations/m170111_190400_disable_web_notifications.php
+cp ./.postgresql/patches/m170111_190400_disable_web_notifications.php ./protected/humhub/modules/notification/migrations/m170111_190400_disable_web_notifications.php
 
 git add .
 git commit -am "migration hotfix"

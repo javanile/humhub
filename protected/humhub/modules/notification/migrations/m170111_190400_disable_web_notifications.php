@@ -10,7 +10,7 @@ class m170111_190400_disable_web_notifications extends Migration
 
     public function up()
     {
-        $this->addColumn('notification', 'send_web_notifications', 'boolean default "1"');
+        $this->addColumn('notification', 'send_web_notifications', 'boolean default true');
     }
 
     public function down()
