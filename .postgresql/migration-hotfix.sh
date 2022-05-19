@@ -4,7 +4,7 @@ cp ./.postgresql/patches/m131023_165755_initial.php ./protected/humhub/migration
 cp ./.postgresql/patches/m131213_165552_user_optimize.php ./protected/humhub/modules/user/migrations/m131213_165552_user_optimize.php
 cp ./.postgresql/patches/m140512_141414_i18n_profilefields.php ./protected/humhub/modules/user/migrations/m140512_141414_i18n_profilefields.php
 cp ./.postgresql/patches/m140701_074404_protect_default_profilefields.php ./protected/humhub/modules/user/migrations/m140701_074404_protect_default_profilefields.php
-#cp ./.postgresql/patches/m140901_080147_indizies.php ./protected/humhub/modules/like/migrations/m140901_080147_indizies.php
+cp ./.postgresql/patches/m140901_080147_indizies.php ./protected/humhub/modules/like/migrations/m140901_080147_indizies.php
 #cp ./.postgresql/patches/m140901_080432_indices.php ./protected/humhub/modules/file/migrations/m140901_080432_indices.php
 #cp ./.postgresql/patches/m171025_200312_utf8mb4_fixes.php ./protected/humhub/modules/user/migrations/m171025_200312_utf8mb4_fixes.php
 #cp ./.postgresql/patches/m131023_164513_initial.php ./protected/humhub/modules/user/migrations/m131023_164513_initial.php
