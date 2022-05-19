@@ -22,16 +22,16 @@ class m160229_162959_multiusergroups extends Migration
         // Add indexes and foreign keys
         $this->createIndex('idx-group_user', 'group_user', ['user_id', 'group_id'], true);
         $this->addForeignKey('fk-user-group', 'group_user', 'user_id', 'user', 'id', 'CASCADE');
-        $this->addForeignKey('fk-group-group', 'group_user', 'group_id', '`group`', 'id', 'CASCADE');
+        $this->addForeignKey('fk-group-group', 'group_user', 'group_id', 'group', 'id', 'CASCADE');
 
         // Merge old group user and group admins
-        $this->execute('INSERT INTO group_user (user_id, group_id) SELECT DISTINCT user.id, user.group_id FROM user LEFT JOIN `group` ON user.group_id=group.id WHERE group.id IS NOT NULL');
+     //   $this->execute('INSERT INTO group_user (user_id, group_id) SELECT DISTINCT "user"."id", "user"."group_id" FROM user LEFT JOIN "group" ON "user"."group_id"="group"."id" WHERE "group"."id" IS NOT NULL');
         $this->execute('UPDATE group_user u SET is_group_admin = :value WHERE EXISTS (Select 1 FROM group_admin a WHERE u.user_id = a.user_id);', [':value' => 1]);
 
         // Add group columns
-        $this->addColumn('group', 'is_admin_group', Schema::TYPE_BOOLEAN. ' NOT NULL DEFAULT 0');
-        $this->addColumn('group', 'show_at_registration', Schema::TYPE_BOOLEAN. ' NOT NULL DEFAULT 1');
-        $this->addColumn('group', 'show_at_directory', Schema::TYPE_BOOLEAN. ' NOT NULL DEFAULT 1');
+        $this->addColumn('group', 'is_admin_group', Schema::TYPE_BOOLEAN. ' NOT NULL DEFAULT false');
+        $this->addColumn('group', 'show_at_registration', Schema::TYPE_BOOLEAN. ' NOT NULL DEFAULT true');
+        $this->addColumn('group', 'show_at_directory', Schema::TYPE_BOOLEAN. ' NOT NULL DEFAULT true');
 
         // Create initial administration group
         $this->insertSilent('group', [
