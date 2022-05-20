@@ -1,6 +1,6 @@
-# NOTE: This files purpose is to spin-up the project for testing it in CI. 
-#       Please do not understand it as recommendation for an production 
-#       docker-compose setup. For that see the README. If you have additions 
+# NOTE: This files purpose is to spin-up the project for testing it in CI.
+#       Please do not understand it as recommendation for an production
+#       docker-compose setup. For that see the README. If you have additions
 #       to make, please add them there.
 version: '3.1'
 services:
@@ -35,7 +35,7 @@ services:
       HUMHUB_REDIS_PORT: 6379
       HUMHUB_REDIS_PASSWORD: redis_password
     volumes:
-      - "${HUMHUB_VOLUME_CONFIG}:/var/www/localhost/htdocs/protected/config"
+      - "../:/var/www/localhost/htdocs"
     #healthcheck:
     #  test: ["CMD", "curl", "-f", "http://localhost/ping"]
     #  interval: 30s
